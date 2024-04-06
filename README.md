@@ -25,11 +25,11 @@ Replace <Path to BasketSplitter.jar> with the actual path to your BasketSplitter
 
 The following code creates an instance of BasketSplitter with the provided configuration file, then splits the product list into different shipping methods, and finally prints the split products for each shipping method.
 ```java
-String absolutePathToConfigFile = "/path/to/config.json"
-List<String> items = Arrays.asList("Chocolate - Unsweetened", "Peach - Fresh", "Sauce - Salsa", "Bread - Petit Baguette")
+String absolutePathToConfigFile = "/path/to/config.json";
+List<String> items = Arrays.asList("Chocolate - Unsweetened", "Peach - Fresh", "Sauce - Salsa", "Bread - Petit Baguette");
 
-BasketSplitter basketSplitter = new BasketSplitter(configFile)
-Map<String, List<String>> splittedProducts = basketSplitter.split(items)
+BasketSplitter basketSplitter = new BasketSplitter(configFile);
+Map<String, List<String>> splittedProducts = basketSplitter.split(items);
 
 for (Map.Entry<String, List<String>> entry : splittedProducts.entrySet()) {
             String key = entry.getKey();
