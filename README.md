@@ -28,7 +28,7 @@ The following code creates an instance of BasketSplitter with the provided confi
 String absolutePathToConfigFile = "/path/to/config.json";
 List<String> items = Arrays.asList("Chocolate - Unsweetened", "Peach - Fresh", "Sauce - Salsa", "Bread - Petit Baguette");
 
-BasketSplitter basketSplitter = new BasketSplitter(configFile);
+BasketSplitter basketSplitter = new BasketSplitter(absolutePathToConfigFile);
 Map<String, List<String>> splittedProducts = basketSplitter.split(items);
 
 for (Map.Entry<String, List<String>> entry : splittedProducts.entrySet()) {
