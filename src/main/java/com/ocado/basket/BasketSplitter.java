@@ -14,8 +14,8 @@ public class BasketSplitter {
     }
 
     public Map<String, List<String>> split(List<String> items) {
-        Map<String, Integer> deliveryMethods = new HashMap<>();
         Map<String, List<String>> result = new HashMap<>();
+        Map<String, Integer> deliveryMethods = new HashMap<>();
         List<Product> productsToSplit = new ArrayList<>();
 
         // Load the shipping methods from the configuration file for each product and count the number of occurrences of each shipping method.
@@ -37,11 +37,11 @@ public class BasketSplitter {
             List<String> products = new ArrayList<>();
             List<Product> productsToSplitCopy = new ArrayList<>(productsToSplit);
             for (Product product : productsToSplitCopy) {
-                List<String> deliveryMethodsForItem = product.getDeliveryMethods();
-                if (deliveryMethodsForItem.contains(bestDeliveryMethod)) {
+                List<String> deliveryMethodsForProduct = product.getDeliveryMethods();
+                if (deliveryMethodsForProduct.contains(bestDeliveryMethod)) {
                     products.add(product.getProductName());
                     productsToSplit.remove(product);
-                    for (String method : deliveryMethodsForItem) {
+                    for (String method : deliveryMethodsForProduct) {
                         deliveryMethods.put(method, deliveryMethods.get(method) - 1);
                     }
                 }
