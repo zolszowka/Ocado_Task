@@ -10,7 +10,7 @@ To install the Fat Jar containing the BasketSplitter as a Maven dependency, you 
 ```
 mvn install:install-file -Dfile=<Path to BasketSplitter.jar> -DgroupId=com.ocado.basket -DartifactId=BasketSplitter -Dversion=1.0 -Dpackaging=jar
 ```
-Replace <Path to BasketSplitter.jar> with the actual path to your BasketSplitter.jar file.
+Replace < Path to BasketSplitter.jar > with the actual path to your BasketSplitter.jar file.
 
 2. Once the JAR is installed, you can add it as a dependency in your Maven project's pom.xml file:
 ```
