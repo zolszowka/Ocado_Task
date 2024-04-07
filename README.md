@@ -20,6 +20,8 @@ Replace <Path to BasketSplitter.jar> with the actual path to your BasketSplitter
     <version>1.0</version>
 </dependency>
 ```
+### Maven
+This project uses Maven as a build automation tool and dependency management system. Maven simplifies the build process and helps manage project dependencies efficiently.
 
 ## Usage Example
 
@@ -61,4 +63,5 @@ The `Product` class represents a product that can be delivered by one or more de
 ### JSONLoader Class
 
 The `JSONLoader` class is responsible for loading delivery methods of a given product from a JSON file.
+It utilizes the json-simple library. This library is used to parse JSON data and extract the necessary information for the BasketSplitter application.
 
